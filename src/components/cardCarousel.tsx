@@ -9,6 +9,7 @@ export function CardCarousel(): JSX.Element {
 
   return (
     <div className="m-spacing-400 flex w-full flex-col items-center justify-center gap-spacing-400 md:w-auto">
+      <span className="text-label text-content-standard-tertiary">원래 단어는 어이없게 외우는 겁니다</span>
       <Card {...currentWord} />
       <div className="mb-spacing-400 text-content-standard-secondary">
         {currentIndex + 1} / {words.length}
