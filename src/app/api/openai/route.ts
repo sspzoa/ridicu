@@ -10,31 +10,36 @@ export async function POST(req: Request) {
     const { words } = await req.json();
 
     const prompt = `
-      다음 단어 목록을 사용하여 단어, 발음, 암기법, 예문, 뜻을 포함하는 데이터 반환해줘.
-      응답은 다른 텍스트 없이 Json 형식의 텍스트로 해줘.
-      
-      암기법은 간결하지만 강렬하게 작성해줘.
-     
-      :${words.join(', ')} 
-    
-      Ex)
-      [
-        {
-          "word": "Diligent",
-          "pronunciation": "딜리전트",
-          "mnemonic": "딜을 이리도 전투적으로!",
-          "example": "She is diligent in her studies.",
-          "meaning": "부지런한, 성실한"
-        },
-        {
-          "word": "Eloquent",
-          "pronunciation": "엘러퀀트",
-          "mnemonic": "엘레강스하게 말을 퀸처럼",
-          "example": "He gave an eloquent speech.",
-          "meaning": "유창한, 설득력 있는"
-        }
-      ]
-    `;
+다음 영어 단어 목록을 사용하여 각 단어에 대해 다음 정보를 포함하는 JSON 데이터를 생성해 주세요:
+- word: 단어
+- pronunciation: 한국어 발음
+- mnemonic: 발음을 이용한 한국어 암기 문장, 단어를 직접 포함해서는 안되며, 문장이 단어의 뜻을 기억하도록 유도해야함.
+- example: 단어를 사용한 영어 예문
+- meaning: 단어의 한국어 뜻
+
+응답은 다른 텍스트 없이 JSON 형식의 텍스트로만 해주세요.
+
+단어 목록:
+${words.join(', ')}
+
+예시:
+[
+  {
+    "word": "torture",
+    "pronunciation": "토처",
+    "mnemonic": "곤장을 또 쳐",
+    "example": "The prisoner confessed under torture.",
+    "meaning": "고문하다, 고문"
+  },
+  {
+    "word": "measure",
+    "pronunciation": "메저",
+    "mnemonic": "줄자로 매 줘",
+    "example": "We need to measure the size of the window.",
+    "meaning": "측정하다, 조치"
+  }
+]
+`;
 
     const completion = await openai.chat.completions.create({
       model: 'chatgpt-4o-latest',

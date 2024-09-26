@@ -1,5 +1,6 @@
 import type { Word } from '@/types/Word';
 import { useRouter } from 'next/navigation';
+import type React from 'react';
 import { useCallback } from 'react';
 
 const useWordSubmit = (words: string[], setWords: React.Dispatch<React.SetStateAction<string[]>>) => {
