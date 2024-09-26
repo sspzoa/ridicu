@@ -1,7 +1,11 @@
-export default function Home() {
+'use client';
+
+import { CardCarousel } from '@/components/cardCarousel';
+
+export default function Home(): JSX.Element {
   return (
     <div className="flex justify-center items-center h-[100dvh]">
-      <strong className="text-display text-core-accent">Word Learner</strong>
+      <CardCarousel />
     </div>
   );
 }
