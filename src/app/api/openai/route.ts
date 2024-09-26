@@ -41,12 +41,17 @@ export async function POST(req: Request) {
 
     const content = completion.choices[0].message.content;
 
+    if (!content) {
+      return NextResponse.json({ error: 'OpenAI API 응답이 비어있습니다' }, { status: 500 });
+    }
+
     try {
-      const parsedContent = JSON.parse(content || '{}');
+      const jsonString = content.replace(/```json\n?|\n?```/g, '').trim();
+      const parsedContent = JSON.parse(jsonString);
       return NextResponse.json({ result: parsedContent });
     } catch (parseError) {
       console.error('JSON 파싱 오류:', parseError);
-      return NextResponse.json({ result: content, parseError: '유효한 JSON이 아닙니다' });
+      return NextResponse.json({ error: '유효한 JSON이 아닙니다', rawContent: content }, { status: 400 });
     }
   } catch (error) {
     console.error('OpenAI API error:', error);
