@@ -13,7 +13,7 @@ const WantedSansVariable = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Word Learner',
+  title: 'Ridicu - 리디큐',
   description: 'Best Word Learning App powered by AI',
 };
 
