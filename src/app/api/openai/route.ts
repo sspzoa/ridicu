@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 다음 영어 단어 목록을 사용하여 각 단어에 대해 다음 정보를 포함하는 JSON 데이터를 생성해 주세요:
 - word: 단어
 - pronunciation: 한국어 발음
-- mnemonic: 발음을 이용한 한국어 암기 문장, 단어를 직접 포함해서는 안되며, 문장이 단어의 뜻을 기억하도록 유도해야함.
+- mnemonic: 발음을 이용한 한국어 암기 문장, 문장이 단어의 뜻을 기억하도록 간접적으로 유도해야함.
 - example: 단어를 사용한 영어 예문
 - meaning: 단어의 한국어 뜻
 
