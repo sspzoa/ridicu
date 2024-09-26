@@ -10,5 +10,5 @@ ENV OPENAI_API_KEY=${OPENAI_API_KEY}
 COPY . .
 RUN bun run build
 
-EXPOSE 3000
+EXPOSE 3001
 CMD [ "bun", "run", "start" ]
