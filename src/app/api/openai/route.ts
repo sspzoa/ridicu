@@ -12,6 +12,8 @@ export async function POST(req: Request) {
     const prompt = `
       다음 단어 목록을 사용하여 단어, 발음, 암기법, 예문, 뜻을 포함하는 데이터 반환해줘.
       응답은 다른 텍스트 없이 Json 형식의 텍스트로 해줘.
+      
+      암기법은 간결하지만 강렬하게 작성해줘.
      
       :${words.join(', ')} 
     
