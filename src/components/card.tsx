@@ -15,10 +15,10 @@ export function Card({ word, pronunciation, mnemonic, example, meaning }: Word):
   return (
     <div className="w-full h-full flex flex-col gap-spacing-700 justify-center items-center border border-line-outline rounded-radius-600 shadow-xl bg-components-fill-standard-primary p-spacing-700">
       <div className="flex flex-col gap-spacing-400 justify-center items-center">
-        <strong className="text-title text-content-standard-secondary">{mnemonic}</strong>
+        <strong className="text-title text-content-standard-secondary text-center">{mnemonic}</strong>
         <div className="flex flex-col justify-center items-center">
-          <strong className="text-title text-core-accent">{word}</strong>
-          <span className="text-body text-content-standard-secondary">/{pronunciation}/</span>
+          <strong className="text-title text-core-accent text-center">{word}</strong>
+          <span className="text-body text-content-standard-secondary text-center">/{pronunciation}/</span>
           <span className="text-body text-content-standard-secondary text-center">{highlightedExample}</span>
         </div>
       </div>
