@@ -15,9 +15,6 @@ const WantedSansVariable = localFont({
 export const metadata: Metadata = {
   title: 'Word Learner',
   description: 'Best Word Learning App powered by AI',
-  openGraph: {
-    images: [{ url: 'https://sspzoa.io/images/og-image.png' }],
-  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
