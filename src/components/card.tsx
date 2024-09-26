@@ -22,10 +22,8 @@ export function Card({ word, pronunciation, mnemonic, example, meaning }: Word):
           <span className="text-center text-body text-content-standard-secondary">{highlightedExample}</span>
         </div>
       </div>
-      <div className="group animate-pulse rounded-radius-300 bg-solid-translucent-red duration-300 ease-in-out hover:animate-none hover:bg-components-fill-standard-primary">
-        <span className="text-title text-content-standard-tertiary opacity-0 duration-300 ease-in-out group-hover:opacity-100">
-          {meaning}
-        </span>
+      <div className="group animate-pulse rounded-radius-300 bg-solid-translucent-red hover:animate-none hover:bg-components-fill-standard-primary">
+        <span className="text-title text-content-standard-tertiary opacity-0 group-hover:opacity-100">{meaning}</span>
       </div>
     </div>
   );
