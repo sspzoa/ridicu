@@ -63,4 +63,18 @@ export const words: Word[] = [
     example: 'Her resilience helped her bounce back from setbacks.',
     meaning: '회복력, 탄력성',
   },
+  {
+    word: 'Integrity',
+    pronunciation: '인테그리티',
+    mnemonic: '인터넷에서 그리는 티 없는 행동',
+    example: 'His integrity in business dealings earned him respect.',
+    meaning: '정직성, 진실성',
+  },
+  {
+    word: 'Curiosity',
+    pronunciation: '큐리어시티',
+    mnemonic: '큐(Q)를 리어카에 실어 도시로',
+    example: 'Her curiosity about science led her to become a researcher.',
+    meaning: '호기심',
+  },
 ];

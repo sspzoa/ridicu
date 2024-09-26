@@ -14,6 +14,7 @@ export function useCardCarousel(words: Word[]) {
 
   return {
     currentWord: words[currentIndex],
+    currentIndex,
     nextCard,
     prevCard,
   };
