@@ -42,7 +42,7 @@ ${words.join(', ')}
 `;
 
     const completion = await openai.chat.completions.create({
-      model: 'chatgpt-4o-latest',
+      model: 'gpt-4-turbo',
       messages: [{ role: 'user', content: prompt }],
     });
 
